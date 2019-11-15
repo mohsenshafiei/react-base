@@ -1,16 +1,15 @@
 const inquirer = require('inquirer');
-var ncp = require('ncp').ncp;
+const ncp = require('ncp').ncp;
 ncp.limit = 16;
-
 const generateReactProject = (name) => {
-  console.log('generating \n');
-  const source = './template'
-  const destination = `./${name}`
-  ncp(source, destination, function (err) {
+  console.log('generating... \n');
+  const src = './template'
+  const dist = `../${name}`
+  ncp(src, dist, function (err) {
    if (err) {
      return console.error(err);
    }
-   console.log('your project created successfully!');
+   console.log('created successfully!');
   });
 }
 
@@ -21,10 +20,9 @@ const start = async () => {
       {
         type: 'list',
         name: 'type',
-        message: 'What do you want to do?',
+        message: 'create:',
         choices: [
           'react',
-          'react-app-with-router',
         ]
       },
       {
