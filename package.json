@@ -1,0 +1,21 @@
+{
+  "name": "react-base",
+  "version": "0.0.1",
+  "description": "new react project generator",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {
+    "ncp": "^2.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "react-base"
+  ],
+  "author": "Mohsen Shafiei Tafreshi",
+  "license": "MIT"
+}
